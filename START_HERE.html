@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setup Instructions - Car Brochure</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #7c3aed 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        .content {
+            padding: 40px;
+        }
+        .warning {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        .warning h3 {
+            color: #d97706;
+            margin-bottom: 10px;
+        }
+        .step {
+            background: #f8fafc;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 12px;
+            border: 2px solid #e2e8f0;
+        }
+        .step h3 {
+            color: #1e3a8a;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+        .step code {
+            display: block;
+            background: #1e293b;
+            color: #10b981;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+        }
+        .step p {
+            margin: 10px 0;
+        }
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .feature {
+            background: #eff6ff;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .feature-icon {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        .button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 10px 10px 10px 0;
+            transition: transform 0.2s;
+        }
+        .button:hover {
+            transform: translateY(-2px);
+        }
+        .footer {
+            text-align: center;
+            padding: 30px;
+            background: #f8fafc;
+            color: #64748b;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚗 Car Brochure Application</h1>
+            <p>Interactive 360° Car Viewer with Animations</p>
+        </div>
+
+        <div class="content">
+            <div class="warning">
+                <h3>⚠️ Important Notice</h3>
+                <p><strong>This is a React application that requires building before use.</strong></p>
+                <p>You cannot simply open index.html in your browser. Please follow the setup instructions below.</p>
+            </div>
+
+            <h2 style="color: #1e3a8a; margin: 30px 0 20px 0;">Quick Setup Guide</h2>
+
+            <div class="step">
+                <h3>Step 1️⃣: Install Node.js</h3>
+                <p>Download and install Node.js from the official website:</p>
+                <a href="https://nodejs.org/" class="button" target="_blank">Download Node.js</a>
+                <p style="margin-top: 15px;">Choose the LTS (Long Term Support) version. This includes npm, which you'll need for the next steps.</p>
+            </div>
+
+            <div class="step">
+                <h3>Step 2️⃣: Open Terminal/Command Prompt</h3>
+                <p><strong>Windows:</strong> Press Win + R, type <code style="display: inline; background: #e2e8f0; padding: 2px 8px; border-radius: 4px;">cmd</code>, press Enter</p>
+                <p><strong>Mac:</strong> Press Cmd + Space, type "terminal", press Enter</p>
+                <p><strong>Linux:</strong> Press Ctrl + Alt + T</p>
+            </div>
+
+            <div class="step">
+                <h3>Step 3️⃣: Navigate to Project Folder</h3>
+                <p>Use the <code style="display: inline; background: #e2e8f0; padding: 2px 8px; border-radius: 4px;">cd</code> command to navigate to this project folder:</p>
+                <code>cd path/to/car-brochure-folder</code>
+                <p style="margin-top: 10px;">Example:</p>
+                <code>cd C:\Users\YourName\Downloads\car-brochure</code>
+            </div>
+
+            <div class="step">
+                <h3>Step 4️⃣: Install Dependencies</h3>
+                <p>Run this command (only needed once):</p>
+                <code>npm install</code>
+                <p style="margin-top: 10px;">This will download all required libraries and packages.</p>
+            </div>
+
+            <div class="step">
+                <h3>Step 5️⃣: Start Development Server</h3>
+                <p>Run this command:</p>
+                <code>npm run dev</code>
+                <p style="margin-top: 10px;">Then open your browser and visit:</p>
+                <code>http://localhost:5173</code>
+                <p style="margin-top: 10px;"><strong>🎉 Your application will now be running!</strong></p>
+            </div>
+
+            <h2 style="color: #1e3a8a; margin: 40px 0 20px 0;">✨ Application Features</h2>
+            
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">🔄</div>
+                    <strong>360° Viewer</strong>
+                    <p>Drag to rotate the car</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">✨</div>
+                    <strong>Smooth Animations</strong>
+                    <p>Framer Motion powered</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">📱</div>
+                    <strong>Responsive</strong>
+                    <p>Works on all devices</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🎨</div>
+                    <strong>Modern UI</strong>
+                    <p>Tailwind CSS styling</p>
+                </div>
+            </div>
+
+            <h2 style="color: #1e3a8a; margin: 40px 0 20px 0;">📦 Building for Production</h2>
+            
+            <div class="step">
+                <h3>Option 1: Deploy to GitHub Pages (Recommended)</h3>
+                <p><strong>🌐 Make your site live on the internet without localhost!</strong></p>
+                <p style="margin-top: 10px;">For detailed step-by-step instructions, open:</p>
+                <div style="text-align: center; margin: 20px 0;">
+                    <a href="QUICK_START_GITHUB.md" class="button" target="_blank">📖 GitHub Deployment Guide</a>
+                </div>
+                <p><strong>Quick Summary:</strong></p>
+                <ol style="margin-left: 20px; margin-top: 10px;">
+                    <li>Update <code style="display: inline; background: #e2e8f0; padding: 2px 8px; border-radius: 4px;">vite.config.ts</code> with your repo name</li>
+                    <li>Create a GitHub repository</li>
+                    <li>Push your code to GitHub</li>
+                    <li>Enable GitHub Pages (Source: GitHub Actions)</li>
+                    <li>Your site will be live at <code style="display: inline; background: #e2e8f0; padding: 2px 8px; border-radius: 4px;">https://username.github.io/repo-name/</code></li>
+                </ol>
+            </div>
+
+            <div class="step">
+                <h3>Option 2: Create Local Production Build</h3>
+                <p>To create static files for manual deployment:</p>
+                <code>npm run build</code>
+                <p style="margin-top: 10px;">This creates a <code style="display: inline; background: #e2e8f0; padding: 2px 8px; border-radius: 4px;">dist</code> folder with all your HTML, CSS, and JavaScript files ready to upload to any web hosting service.</p>
+            </div>
+
+            <h2 style="color: #1e3a8a; margin: 40px 0 20px 0;">❓ Troubleshooting</h2>
+            
+            <div class="step">
+                <h3>Common Issues</h3>
+                <p><strong>Problem:</strong> "npm: command not found"</p>
+                <p><strong>Solution:</strong> Install Node.js first (Step 1)</p>
+                <hr style="margin: 15px 0; border: none; border-top: 1px solid #e2e8f0;">
+                <p><strong>Problem:</strong> Port already in use</p>
+                <p><strong>Solution:</strong> Run <code style="display: inline; background: #e2e8f0; padding: 2px 8px; border-radius: 4px;">npm run dev -- --port 3000</code></p>
+                <hr style="margin: 15px 0; border: none; border-top: 1px solid #e2e8f0;">
+                <p><strong>Problem:</strong> Blank page after building</p>
+                <p><strong>Solution:</strong> Use a web server to serve the dist folder (see BUILD_INSTRUCTIONS.txt)</p>
+            </div>
+
+            <div style="text-align: center; margin: 40px 0;">
+                <p style="font-size: 1.1em; color: #64748b;">For detailed instructions, see:</p>
+                <p style="margin-top: 10px;">
+                    <strong style="color: #1e3a8a;">BUILD_INSTRUCTIONS.txt</strong> or 
+                    <strong style="color: #1e3a8a;">README.md</strong>
+                </p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>© 2026 Genesis Motors. All rights reserved.</p>
+            <p style="margin-top: 10px;">Built with React, TypeScript, Vite, and Tailwind CSS</p>
+        </div>
+    </div>
+</body>
+</html>

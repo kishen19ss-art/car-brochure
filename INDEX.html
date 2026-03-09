@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Brochure - Documentation Hub</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+            color: #e2e8f0;
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .header {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            border-radius: 20px;
+            margin-bottom: 40px;
+            box-shadow: 0 20px 60px rgba(59, 130, 246, 0.3);
+        }
+        .header h1 {
+            font-size: 3em;
+            margin-bottom: 15px;
+            color: white;
+        }
+        .header p {
+            font-size: 1.3em;
+            color: #e0e7ff;
+        }
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 30px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border-color: rgba(139, 92, 246, 0.5);
+            background: rgba(255, 255, 255, 0.08);
+        }
+        .card-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+        .card h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #a5b4fc;
+        }
+        .card p {
+            color: #cbd5e1;
+            margin-bottom: 20px;
+        }
+        .card-tag {
+            display: inline-block;
+            padding: 5px 12px;
+            background: rgba(139, 92, 246, 0.2);
+            border-radius: 20px;
+            font-size: 0.85em;
+            margin-right: 8px;
+            margin-top: 10px;
+            color: #c4b5fd;
+        }
+        .button {
+            display: inline-block;
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            margin-top: 15px;
+        }
+        .button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.4);
+        }
+        .section-title {
+            font-size: 2em;
+            margin: 40px 0 20px 0;
+            color: #a5b4fc;
+            text-align: center;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .feature {
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+        }
+        .feature-icon {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 60px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #94a3b8;
+        }
+        .quick-links {
+            background: rgba(34, 197, 94, 0.1);
+            border: 2px solid rgba(34, 197, 94, 0.3);
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 40px;
+        }
+        .quick-links h2 {
+            color: #86efac;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .quick-link-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 15px 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .quick-link-item:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚗 Car Brochure</h1>
+            <p>Interactive 360° Car Viewer - Documentation Hub</p>
+        </div>
+
+        <div class="quick-links">
+            <h2>🚀 Ready to Deploy?</h2>
+            <div class="quick-link-item">
+                <div>
+                    <strong style="color: #86efac;">Quick Start (5 minutes)</strong>
+                    <p style="margin: 5px 0; color: #cbd5e1;">Deploy to GitHub Pages - easiest option</p>
+                </div>
+                <a href="QUICK_START_GITHUB.md" class="button">Start Here →</a>
+            </div>
+            <div class="quick-link-item">
+                <div>
+                    <strong style="color: #86efac;">What's New?</strong>
+                    <p style="margin: 5px 0; color: #cbd5e1;">See recent changes and improvements</p>
+                </div>
+                <a href="WHATS_NEW.md" class="button">View Changes →</a>
+            </div>
+        </div>
+
+        <h2 class="section-title">📚 Documentation Guide</h2>
+
+        <div class="card-grid">
+            <div class="card" onclick="window.location.href='QUICK_START_GITHUB.md'">
+                <div class="card-icon">⚡</div>
+                <h2>Quick Start Guide</h2>
+                <p>Deploy to GitHub Pages in 5 minutes. Perfect for beginners!</p>
+                <span class="card-tag">⏱️ 5 min</span>
+                <span class="card-tag">⭐ Recommended</span>
+                <a href="QUICK_START_GITHUB.md" class="button">Read Guide →</a>
+            </div>
+
+            <div class="card" onclick="window.location.href='START_HERE.html'">
+                <div class="card-icon">🎨</div>
+                <h2>Visual Setup Guide</h2>
+                <p>Beautiful visual instructions for local development and deployment.</p>
+                <span class="card-tag">👁️ Visual</span>
+                <span class="card-tag">🎯 Beginner-Friendly</span>
+                <a href="START_HERE.html" class="button">Open Guide →</a>
+            </div>
+
+            <div class="card" onclick="window.location.href='DEPLOYMENT_OPTIONS.md'">
+                <div class="card-icon">🌐</div>
+                <h2>All Deployment Options</h2>
+                <p>Compare all hosting methods: GitHub, Netlify, Vercel, and more.</p>
+                <span class="card-tag">📊 Comparison</span>
+                <span class="card-tag">🔍 Comprehensive</span>
+                <a href="DEPLOYMENT_OPTIONS.md" class="button">Compare →</a>
+            </div>
+
+            <div class="card" onclick="window.location.href='GITHUB_DEPLOYMENT.md'">
+                <div class="card-icon">📖</div>
+                <h2>GitHub Detailed Guide</h2>
+                <p>In-depth instructions for GitHub Pages deployment with troubleshooting.</p>
+                <span class="card-tag">📚 Detailed</span>
+                <span class="card-tag">🔧 Troubleshooting</span>
+                <a href="GITHUB_DEPLOYMENT.md" class="button">Read More →</a>
+            </div>
+
+            <div class="card" onclick="window.location.href='README.md'">
+                <div class="card-icon">📝</div>
+                <h2>README</h2>
+                <p>Technical documentation, features, and local development setup.</p>
+                <span class="card-tag">💻 Technical</span>
+                <span class="card-tag">🛠️ Development</span>
+                <a href="README.md" class="button">View README →</a>
+            </div>
+
+            <div class="card" onclick="window.location.href='PROJECT_SUMMARY.md'">
+                <div class="card-icon">📊</div>
+                <h2>Project Summary</h2>
+                <p>Complete project overview, structure, and customization guide.</p>
+                <span class="card-tag">🎯 Overview</span>
+                <span class="card-tag">🎨 Customization</span>
+                <a href="PROJECT_SUMMARY.md" class="button">View Summary →</a>
+            </div>
+        </div>
+
+        <h2 class="section-title">✨ Application Features</h2>
+
+        <div class="feature-grid">
+            <div class="feature">
+                <div class="feature-icon">🔄</div>
+                <h3>360° Car Viewer</h3>
+                <p>Drag to rotate with mouse or touch gestures</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">✨</div>
+                <h3>Smooth Animations</h3>
+                <p>Framer Motion powered transitions</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">📱</div>
+                <h3>Responsive Design</h3>
+                <p>Works perfectly on all devices</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">⚡</div>
+                <h3>Auto-Rotation</h3>
+                <p>Automatic 360° rotation mode</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🎨</div>
+                <h3>Modern UI</h3>
+                <p>Tailwind CSS v4 styling</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">📊</div>
+                <h3>Tech Specs</h3>
+                <p>Detailed specifications with icons</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🖼️</div>
+                <h3>Image Gallery</h3>
+                <p>Interior and exterior photos</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🚀</div>
+                <h3>Fast Loading</h3>
+                <p>Optimized build and code splitting</p>
+            </div>
+        </div>
+
+        <h2 class="section-title">🛣️ Choose Your Path</h2>
+
+        <div class="card-grid">
+            <div class="card">
+                <div class="card-icon">🏃‍♂️</div>
+                <h2>I Want to Deploy Now!</h2>
+                <p>Get your car brochure live on the internet in 5 minutes.</p>
+                <ol style="text-align: left; margin: 15px 0 15px 20px; color: #cbd5e1;">
+                    <li>Open QUICK_START_GITHUB.md</li>
+                    <li>Follow 5 simple steps</li>
+                    <li>Your site goes live!</li>
+                </ol>
+                <a href="QUICK_START_GITHUB.md" class="button">Deploy Now →</a>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">💻</div>
+                <h2>I Want to Customize First</h2>
+                <p>Run locally, make changes, then deploy when ready.</p>
+                <ol style="text-align: left; margin: 15px 0 15px 20px; color: #cbd5e1;">
+                    <li>Open START_HERE.html</li>
+                    <li>Set up local development</li>
+                    <li>Customize your app</li>
+                    <li>Deploy when ready</li>
+                </ol>
+                <a href="START_HERE.html" class="button">Get Started →</a>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🤔</div>
+                <h2>I Want to Explore Options</h2>
+                <p>Compare all deployment methods and choose what works best.</p>
+                <ol style="text-align: left; margin: 15px 0 15px 20px; color: #cbd5e1;">
+                    <li>Review comparison table</li>
+                    <li>Read pros/cons</li>
+                    <li>Choose your platform</li>
+                    <li>Follow specific guide</li>
+                </ol>
+                <a href="DEPLOYMENT_OPTIONS.md" class="button">Compare Options →</a>
+            </div>
+        </div>
+
+        <div class="footer">
+            <h3 style="color: #a5b4fc; margin-bottom: 15px;">🎉 Ready to Get Started?</h3>
+            <p>Your car brochure is production-ready and waiting to go live!</p>
+            <p style="margin-top: 20px;">
+                <a href="QUICK_START_GITHUB.md" class="button">🚀 Deploy to GitHub</a>
+                <a href="START_HERE.html" class="button">💻 Run Locally</a>
+            </p>
+            <p style="margin-top: 40px; font-size: 0.9em;">
+                © 2026 Genesis Motors. All rights reserved.<br>
+                Built with React 18, TypeScript, Vite, and Tailwind CSS
+            </p>
+        </div>
+    </div>
+</body>
+</html>

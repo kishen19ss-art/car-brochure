@@ -1,0 +1,133 @@
+================================================================================
+                    CAR BROCHURE - BUILD INSTRUCTIONS
+================================================================================
+
+⚠️  IMPORTANT: This is a React application and requires building!
+    You CANNOT just open index.html directly in a browser.
+
+================================================================================
+                         HOW TO RUN THE APPLICATION
+================================================================================
+
+STEP 1: Install Node.js
+------------------------
+Download and install Node.js from: https://nodejs.org/
+(Choose the LTS version - Long Term Support)
+
+
+STEP 2: Open Terminal/Command Prompt
+-------------------------------------
+- Windows: Press Win + R, type "cmd", press Enter
+- Mac: Press Cmd + Space, type "terminal", press Enter
+- Linux: Press Ctrl + Alt + T
+
+
+STEP 3: Navigate to Project Folder
+-----------------------------------
+cd path/to/your/project/folder
+
+Example:
+  cd C:\Users\YourName\Downloads\car-brochure
+  or
+  cd ~/Downloads/car-brochure
+
+
+STEP 4: Install Dependencies
+-----------------------------
+Run this command (only needed once):
+
+  npm install
+
+This will download all required libraries.
+
+
+STEP 5: Run Development Server
+-------------------------------
+Run this command:
+
+  npm run dev
+
+Then open your browser and go to: http://localhost:5173
+
+
+================================================================================
+                     HOW TO BUILD FOR PRODUCTION
+================================================================================
+
+If you want static HTML/JS/CSS files to upload to a web server:
+
+STEP 1: Build the project
+--------------------------
+  npm run build
+
+
+STEP 2: Get the files
+---------------------
+After building, you'll find all files in the "dist" folder:
+  - dist/index.html
+  - dist/assets/...
+
+
+STEP 3: Upload to web hosting
+------------------------------
+Upload the ENTIRE "dist" folder contents to your web hosting service
+(like Netlify, Vercel, or any web server)
+
+
+⚠️  TO TEST LOCALLY: You need a web server. Don't just double-click index.html!
+
+Option A - Use Python (if installed):
+  cd dist
+  python -m http.server 8000
+  Then open: http://localhost:8000
+
+Option B - Use Node.js http-server:
+  npm install -g http-server
+  cd dist
+  http-server
+  Then open: http://localhost:8080
+
+
+================================================================================
+                              TROUBLESHOOTING
+================================================================================
+
+Problem: "npm: command not found"
+Solution: Install Node.js first (see Step 1)
+
+Problem: "Port 5173 already in use"
+Solution: Close other applications or use: npm run dev -- --port 3000
+
+Problem: Blank page after building
+Solution: Make sure you're serving the dist folder with a web server
+
+Problem: Images not loading
+Solution: Check your internet connection (images are loaded from Unsplash)
+
+
+================================================================================
+                            TECHNICAL DETAILS
+================================================================================
+
+Technologies Used:
+- React 18.3.1
+- TypeScript
+- Vite (build tool)
+- Tailwind CSS v4
+- Framer Motion (animations)
+- Lucide React (icons)
+
+Features:
+✓ 360° Interactive Car Viewer (drag to rotate)
+✓ Smooth Animations & Transitions
+✓ Responsive Design (mobile, tablet, desktop)
+✓ Technical Specifications Display
+✓ Image Gallery
+✓ Modern UI/UX
+
+
+================================================================================
+
+Need help? Check the README.md file for more detailed information.
+
+================================================================================

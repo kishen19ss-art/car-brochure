@@ -1,0 +1,201 @@
+================================================================================
+                        QUICK REFERENCE CARD
+                     Car Brochure - GitHub Deployment
+================================================================================
+
+🎯 FASTEST PATH TO DEPLOYMENT (5 minutes)
+================================================================================
+
+STEP 1: Update vite.config.ts (line 8)
+--------------------------------------
+Change: base: process.env.GITHUB_ACTIONS ? '/car-brochure/' : '/',
+To:     base: process.env.GITHUB_ACTIONS ? '/YOUR-REPO-NAME/' : '/',
+
+
+STEP 2: Create GitHub Repo
+---------------------------
+1. Go to github.com
+2. Click "+" → "New repository"
+3. Name: your-repo-name (same as Step 1)
+4. Visibility: Public
+5. Click "Create repository"
+
+
+STEP 3: Push Code
+------------------
+git init
+git add .
+git commit -m "Initial commit"
+git remote add origin https://github.com/YOUR-USERNAME/YOUR-REPO-NAME.git
+git branch -M main
+git push -u origin main
+
+
+STEP 4: Enable GitHub Pages
+----------------------------
+1. Go to repository Settings
+2. Click "Pages" in sidebar
+3. Source: Select "GitHub Actions"
+4. Done!
+
+
+STEP 5: Wait (1-2 minutes)
+---------------------------
+1. Go to Actions tab
+2. Wait for green checkmark ✅
+3. Your site is live!
+
+Your URL: https://YOUR-USERNAME.github.io/YOUR-REPO-NAME/
+
+
+================================================================================
+📚 DOCUMENTATION FILES
+================================================================================
+
+START HERE:
+  INDEX.html              - Visual documentation hub
+
+DEPLOYMENT GUIDES:
+  QUICK_START_GITHUB.md   - 5-minute GitHub deployment
+  GITHUB_DEPLOYMENT.md    - Detailed GitHub guide
+  DEPLOYMENT_OPTIONS.md   - All hosting options compared
+
+SETUP GUIDES:
+  START_HERE.html         - Visual setup guide
+  README.md               - Technical documentation
+  BUILD_INSTRUCTIONS.txt  - Build instructions
+
+REFERENCE:
+  FINAL_SUMMARY.md        - Complete summary
+  WHATS_NEW.md            - Recent changes
+  PROJECT_SUMMARY.md      - Project overview
+
+
+================================================================================
+💻 LOCAL DEVELOPMENT
+================================================================================
+
+Install & Run:
+  npm install
+  npm run dev
+  → Open http://localhost:5173
+
+Build for Production:
+  npm run build
+  → Creates dist/ folder
+
+Preview Production Build:
+  npm run preview
+  → Open http://localhost:4173
+
+
+================================================================================
+🔧 COMMON COMMANDS
+================================================================================
+
+First Time Setup:
+  npm install
+
+Development Server:
+  npm run dev
+
+Production Build:
+  npm run build
+
+Preview Build:
+  npm run preview
+
+Push Updates:
+  git add .
+  git commit -m "Your message"
+  git push
+
+
+================================================================================
+⚠️ IMPORTANT
+================================================================================
+
+BEFORE DEPLOYING:
+  ✓ Update vite.config.ts with your repo name
+  ✓ Repository must be Public (for free GitHub Pages)
+  ✓ Test locally first: npm run dev
+
+AFTER EACH CODE CHANGE:
+  ✓ Just push to GitHub
+  ✓ Site auto-updates in 1-2 minutes
+  ✓ No manual building needed
+
+
+================================================================================
+🌐 YOUR LIVE URL
+================================================================================
+
+After deployment: https://YOUR-USERNAME.github.io/YOUR-REPO-NAME/
+
+Example:
+  Username: johnsmith
+  Repo: car-brochure
+  URL: https://johnsmith.github.io/car-brochure/
+
+
+================================================================================
+❓ TROUBLESHOOTING
+================================================================================
+
+Blank page or 404:
+  → Check vite.config.ts base path matches repo name exactly
+
+Build fails:
+  → Run npm install locally first
+  → Check Actions tab for error details
+
+Images not loading:
+  → Check internet connection (images from Unsplash)
+
+GitHub Actions not running:
+  → Make sure Pages source is "GitHub Actions"
+  → Check repository is Public
+
+
+================================================================================
+📞 NEED MORE HELP?
+================================================================================
+
+Visual Guide:        Open INDEX.html in browser
+Quick Deploy:        Read QUICK_START_GITHUB.md
+Detailed Guide:      Read GITHUB_DEPLOYMENT.md
+All Options:         Read DEPLOYMENT_OPTIONS.md
+Technical Docs:      Read README.md
+
+
+================================================================================
+✨ FEATURES INCLUDED
+================================================================================
+
+✓ 360° Interactive Car Viewer (drag to rotate)
+✓ Smooth Animations (Framer Motion)
+✓ Responsive Design (mobile, tablet, desktop)
+✓ Auto-Rotation Mode
+✓ Technical Specifications Display
+✓ Image Gallery (interior & exterior)
+✓ Modern UI (Tailwind CSS)
+✓ Fast Loading (code splitting)
+
+
+================================================================================
+🎉 YOU'RE READY!
+================================================================================
+
+Your app is configured and ready to deploy.
+
+Next Step: Open INDEX.html or QUICK_START_GITHUB.md
+
+🚀 Deploy in 5 minutes → QUICK_START_GITHUB.md
+💻 Run locally first → START_HERE.html
+🤔 Compare options → DEPLOYMENT_OPTIONS.md
+
+
+================================================================================
+               © 2026 Genesis Motors. All rights reserved.
+          Built with React 18, TypeScript, Vite, and Tailwind CSS
+================================================================================
