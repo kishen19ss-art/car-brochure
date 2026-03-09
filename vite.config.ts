@@ -6,7 +6,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   // Set base path for GitHub Pages deployment
   // Change 'car-brochure' to match your GitHub repository name
-  base: process.env.GITHUB_ACTIONS ? '/car/' : '/',
+  base: process.env.GITHUB_ACTIONS ? '/cars-360/' : '/',
   
   plugins: [
     // The React and Tailwind plugins are both required for Make, even if
